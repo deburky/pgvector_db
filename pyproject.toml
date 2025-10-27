@@ -1,0 +1,57 @@
+[project]
+name = "pgvector-db"
+version = "1.0.0"
+description = "PostgreSQL vector for embedding storage."
+authors = [
+    {name = "Denis Burakov", email = "contact@xrisklab.ai"}
+]
+keywords = ["vector storage", "machine learning", "artificial intelligence"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+
+dependencies = [
+    "sentence-transformers>=3.4.1,<4.0.0",
+    "psycopg2-binary>=2.9.10,<3.0.0",
+    "pandas>=2.2.3,<3.0.0",
+    "numpy>=1.24,<3.0.0",
+    "sqlalchemy>=2.0.38,<3.0.0",
+    "pgcli>=4.1.0,<5.0.0",
+    "tqdm>=4.67.1,<5.0.0",
+    "rich>=13.9.4,<14.0.0",
+    "boto3>=1.36.24,<2.0.0",
+    "pgpq>=0.9.0,<0.10.0",
+    "awswrangler>=3.11.0,<4.0.0",
+    "pyarrow>=8.0.0,<17.0.0",
+]
+
+[project.optional-dependencies]
+test = [
+    "pytest>=7.4.0,<8.0.0",
+    "pytest-cov>=4.1.0,<5.0.0",
+    "moto>=4.2.0,<5.0.0",
+    "faker>=20.0.0,<21.0.0",
+]
+dev = [
+    "jupyter>=1.1.1,<2.0.0",
+    "ipykernel>=6.29.5,<7.0.0",
+    "black>=25.1.0,<26.0.0",
+    "isort>=6.0.0,<7.0.0",
+    "pylint>=3.3.4,<4.0.0",
+    "pydocstyle>=6.3.0,<7.0.0",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
